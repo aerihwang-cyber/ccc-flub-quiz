@@ -85,7 +85,12 @@ const ResultScreen: React.FC<ResultScreenProps> = ({ userName, cccReason, onRest
     const handleShare = async () => {
         const url = new URL(window.location.href);
         const nameParam = userName || '친구';
-        url.search = `?name=${encodeURIComponent(nameParam)}&answers=${answers.join(',')}`;
+        const campus = new URLSearchParams(window.location.search).get('campus');
+        const params = new URLSearchParams();
+        if (campus) params.set('campus', campus);
+        params.set('name', nameParam);
+        params.set('answers', answers.join(','));
+        url.search = `?${params.toString()}`;
         const shareUrl = url.toString();
         const shareTitle = `${nameParam}님에게 딱 맞는 동아리 추천 결과!`;
         const shareText = 'AI가 내 성향을 분석해줬어! 너도 한번 해봐! 👀';
