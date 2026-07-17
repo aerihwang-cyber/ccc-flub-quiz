@@ -1,4 +1,4 @@
-// services/claudeService.ts — 기존 geminiService.ts 대체
+// services/claudeService.ts — 기존 services/claudeService.ts 대체
 // 브라우저에는 API 키가 전혀 없고, 자체 서버리스 함수만 호출합니다.
 
 const FALLBACK_REASON =
