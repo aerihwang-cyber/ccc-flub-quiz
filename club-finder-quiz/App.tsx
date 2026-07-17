@@ -88,15 +88,15 @@ const App: React.FC = () => {
         const alreadySubmitted = localStorage.getItem(dedupeKey);
 
         if (!alreadySubmitted) {
-            const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdn_8kNRMhGtwrnaWR6ScbVIS3DQH4CHFkiBsQirPkuoRbTRA/formResponse";
+            const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdthn5lvfyCNdX9L4xTdXubxiqb0efWfuICXFlCyjlriUB2eQ/formResponse";
 
             const formData = new FormData();
-            formData.append('entry.169121757', campusName);
-            formData.append('entry.1357676307', answers.join(', '));
-            formData.append('entry.737221622', userInfo.name);
-            formData.append('entry.217578750', userInfo.major);
-            formData.append('entry.2007312300', userInfo.studentId);
-            formData.append('entry.501298672', userInfo.phone);
+            formData.append('entry.1347246156', userInfo.name);
+            formData.append('entry.1594868746', campusName);
+            formData.append('entry.710972002', userInfo.major);
+            formData.append('entry.999666589', userInfo.studentId);
+            formData.append('entry.791346982', userInfo.phone);
+            formData.append('entry.2094986446', '동의합니다 (동아리 활동 및 연락 목적으로 이름, 전공, 학번, 연락처를 수집 및 이용하는 것에 동의)');
 
             try {
                 await fetch(GOOGLE_FORM_ACTION_URL, {
