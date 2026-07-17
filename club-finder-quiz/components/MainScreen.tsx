@@ -54,6 +54,16 @@ const MainScreen: React.FC<MainScreenProps> = ({ onStart }) => {
             >
                 시작하기 🎯
             </button>
+
+            {/* 관리자 전용 링크: 응답 데이터가 쌓이는 구글 시트로 이동 */}
+            <a
+                href="https://docs.google.com/spreadsheets/d/1eEkb0fekeeEtemNdsKE4KfxKmHcOgXXuGBavij5SxuI/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block mt-6 text-xs text-slate-300 hover:text-slate-400 transition-colors"
+            >
+                관리자
+            </a>
         </div>
     );
 };
